@@ -31,7 +31,6 @@ class Usuario(BaseModel):
     def validar_senha(cls, value: str):
         if (len(value) < 6):
             raise ValueError("O bobaião tem que ter pelo menos 6 caracteres")
-        if (value[0].isupper)
         return value
 
 
