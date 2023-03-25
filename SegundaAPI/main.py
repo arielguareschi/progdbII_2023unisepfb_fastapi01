@@ -1,6 +1,9 @@
 from fastapi import FastAPI
 
-from routes import curso_router, usuario_router
+from routes import (
+    curso_router, 
+    usuario_router,
+    tipo_router)
 
 API_V1_STR: str = '/api/v1'
 
@@ -13,6 +16,7 @@ app.include_router(curso_router.router, tags=['cursos'],
                    prefix=API_V1_STR)
 app.include_router(usuario_router.router, tags=['Usuarios'], 
                    prefix=API_V1_STR)
+app.include_router(tipo_router.router, prefix=API_V1_STR, tags=['Tipos'])
 
 
 if __name__ == "__main__":
