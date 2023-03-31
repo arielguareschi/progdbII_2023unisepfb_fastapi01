@@ -13,7 +13,7 @@ api_router.include_router(lancamento.router,
                           tags=['Lançamentos'])
 api_router.include_router(saldodiario.router,
                           prefix='/saldodiario',
-                          tags=['Saldo Diario'])
+                          tags=['Saldo Diário'])
 api_router.include_router(tipo.router,
                           prefix='/tipo',
                           tags=['Tipo'])
